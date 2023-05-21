@@ -1,0 +1,19 @@
+.xans-layout-logotop a { font-family:verdana, '맑은 고딕', malgungothic, sans-serif; font-size:40px; color:#008bcc; font-weight:bold; text-decoration:none; font-style:normal; }
+.xans-layout-logotop img { max-width:800px; max-height:112px; }
+
+.header_list .list_inner{
+  display: flex;
+  justify-content: center;
+}
+.header_list .list_inner .item{
+  padding: 12px 0;
+  min-width: 200px;
+  text-align: center;
+  cursor: pointer;
+}
+.header_icons ul{
+  display: flex;
+}
+.header_icons ul li {
+  padding: 0 14px;
+}

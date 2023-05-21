@@ -1,0 +1,80 @@
+<!--@layout(/layout/basic/main.html)-->
+<!--@css(/css/module/layout/logotop.css)-->
+
+<header id="header">
+  <div class="inner">
+      <div class="topArea">
+            <div class="header_icons">
+                <ul>
+                    <li>마이페이지</li>
+                </ul>
+            </div>
+            <h1 module="Layout_LogoTop">
+                <a href="/index.html">{$mall_name}</a>
+            </h1>
+            <div class="header_icons">
+                <div>
+                    <ul>
+                        <li>장바구니</li>
+                        <li class="hbnBtn">햄버거</li>
+                    </ul>
+                </div>
+            </div>
+      </div>
+      <div class="header_list">
+        <ul class="list_inner">
+            <li class="item shop">SHOP</li>
+            <li class="item news"><a href="/blogs/news" class="animUnderHover">NEWS</a></li>
+            <li class="item about"><a href="/pages/about" class="animUnderHover">ABOUT</a></li>
+        </ul>
+      </div>
+  
+      <div module="Layout_multishopList" class="list">
+          <!--@css(/css/module/layout/multishopList.css)-->
+          <button type="button" class="toggle"><span>{$current_language}</span></button>
+          <ul module="Layout_multishopListitem">
+              <li class="{$selected_class}">
+                  <a href="//{$shop_domain}/">                    
+                      <span class="name">{$locale_language}</span>
+                      <span class="unit">{$currency_code}</span>
+                  </a>
+              </li>
+              <li class="{$selected_class}">
+                  <a href="//{$shop_domain}/">
+                      <span class="name">{$locale_language}</span>
+                      <span class="unit">{$currency_code}</span>
+                  </a>
+              </li>
+          </ul>
+      </div>
+  
+      <div module="Layout_multishopList" class="thumb">
+          <!--@css(/css/module/layout/multishopList.css)-->        
+          <div module="Layout_multishopListmultioption" class="multiOption">
+              <a href="#none">
+                  <span module="Layout_multishopListmultioptionCountry" class="ship">
+                      <strong>Ship to</strong><span> : </span>
+                  </span>
+                  <span module="Layout_multishopListmultioptionLanguage" class="language">
+                      <strong>Language</strong><span> : {$language_name}</span>
+                  </span>
+              </a>
+          </div>
+      </div>
+  
+      <div module="Layout_statelogoff">
+          <!--@css(/css/module/layout/statelogoff.css)-->
+          <a href="/member/login.html" class="log">로그인</a>
+          <a href="/member/join.html">회원가입</a>
+          <a href="/order/basket.html">장바구니 <span class="count {$basket_count_display|display} {$basket_count_display_class}"><span class="{$basket_count_class}">{$basket_count}</span></span></a>
+          <a href="/myshop/order/list.html">주문조회</a>
+          <a href="/myshop/index.html">마이쇼핑</a>
+          <a class="{$board_display|display}" href="/board/index.html">게시판</a>
+      </div>
+  
+      <div class="link">
+          <a module="Layout_bookmark" href="/link/bookmark.html" target="_blank" onclick="winPop(this.href); return false;"><span>즐겨찾기</span></a>
+          <a module="Layout_shortcut" href="/link/shortcut.html" target="_blank" onclick="winPop(this.href); return false;">바로가기</a>
+      </div>
+  </div>
+  </header>
