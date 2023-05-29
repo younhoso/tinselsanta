@@ -93,6 +93,7 @@ $(function(){
     });
 
     $('.hbnBtn').on('click', function() {
-        $('.header_side').addClass('is_open');
+        $(this).toggleClass('on')
+        $('.header_side').toggleClass('is_open');
     })
 });

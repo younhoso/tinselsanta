@@ -3,8 +3,7 @@
   max-width: 450px;
   min-width: 320px;
   height: 100%;
-  overflow-x: hidden;
-  overflow-y: scroll;
+  overflow: auto;
   padding: 40px 40px 120px;
   position: fixed;
   top: 0;
@@ -12,13 +11,21 @@
   z-index: 1;
   background: #fff;
   transform: translate(100%);
-  transition: all .6s ease;
-  -webkit-transition: all .6s ease;
+  transition: all .3s ease;
+  -webkit-transition: all .3s ease;
   opacity: 0;
 }
 .header_side.is_open {
   transform: translate(0);
   opacity: 1;
+}
+.header_side.is_open ~ .bgop {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
 }
 .xans-layout-category { margin:0 0 30px; }
 .xans-layout-category .position > ul > li { }
